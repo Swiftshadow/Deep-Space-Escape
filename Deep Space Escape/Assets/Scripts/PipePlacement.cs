@@ -25,4 +25,12 @@ public class PipePlacement : MonoBehaviour {
     {
         isPlaced = false;
     }
+    private void OnCollisionStay(Collision collision)
+    {
+       if (collision.gameObject.tag == "wall")
+        {
+            isPlaced = true;
+            Debug.Log("placed");
+        }
+    }
 }

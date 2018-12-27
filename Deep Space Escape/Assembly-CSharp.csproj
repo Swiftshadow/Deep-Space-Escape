@@ -393,6 +393,7 @@
     <Compile Include="Assets\MetaSDK\MetaExamples\Assets\Scripts\MetaPointCloudExample.cs" />
     <Compile Include="Assets\MetaSDK\MetaExamples\Assets\Scripts\SwipeIntensityLightControl.cs" />
     <Compile Include="Assets\Scripts\PipePlacement.cs" />
+    <Compile Include="Assets\Scripts\wallScript.cs" />
     <None Include="Assets\MetaSDK\Meta\Hands\HandInput\Shaders\MetaTransparent.shader" />
     <None Include="Assets\MetaSDK\Meta\SDK2Version.txt" />
     <None Include="Assets\MetaSDK\MetaExamples\Assets\Shaders\PointCloud.shader" />
@@ -411,16 +412,16 @@
     <None Include="Assets\MetaSDK\Meta\Reconstruction\Shaders\OcclusionMesh.shader" />
     <None Include="Assets\MetaSDK\Meta\LocalizationEngine\Calibration UI\SLAM_UI\Materials\OverlayUI.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/pixel/Documents/GitHub/Deep-Space-Escape/Deep Space Escape/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/fastt/OneDrive/Documents/Deep Space Escape/Deep-Space-Escape/Deep Space Escape/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/pixel/Documents/GitHub/Deep-Space-Escape/Deep Space Escape/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/fastt/OneDrive/Documents/Deep Space Escape/Deep-Space-Escape/Deep Space Escape/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/pixel/Documents/GitHub/Deep-Space-Escape/Deep Space Escape/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/fastt/OneDrive/Documents/Deep Space Escape/Deep-Space-Escape/Deep Space Escape/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/pixel/Documents/GitHub/Deep-Space-Escape/Deep Space Escape/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/fastt/OneDrive/Documents/Deep Space Escape/Deep-Space-Escape/Deep Space Escape/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -621,25 +622,25 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="FlatBuffers">
-      <HintPath>C:/Users/pixel/Documents/GitHub/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/FlatBuffers.dll</HintPath>
+      <HintPath>C:/Users/fastt/OneDrive/Documents/Deep Space Escape/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/FlatBuffers.dll</HintPath>
     </Reference>
     <Reference Include="FullSerializer">
-      <HintPath>C:/Users/pixel/Documents/GitHub/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/FullSerializer.dll</HintPath>
+      <HintPath>C:/Users/fastt/OneDrive/Documents/Deep Space Escape/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/FullSerializer.dll</HintPath>
     </Reference>
     <Reference Include="MetaAnalytics">
-      <HintPath>C:/Users/pixel/Documents/GitHub/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/MetaAnalytics.dll</HintPath>
+      <HintPath>C:/Users/fastt/OneDrive/Documents/Deep Space Escape/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/MetaAnalytics.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/pixel/Documents/GitHub/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/fastt/OneDrive/Documents/Deep Space Escape/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SimpleJSON">
-      <HintPath>C:/Users/pixel/Documents/GitHub/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/SimpleJSON.dll</HintPath>
+      <HintPath>C:/Users/fastt/OneDrive/Documents/Deep Space Escape/Deep-Space-Escape/Deep Space Escape/Assets/MetaSDK/Plugins/Managed/SimpleJSON.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/pixel/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/fastt/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/pixel/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/fastt/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>
