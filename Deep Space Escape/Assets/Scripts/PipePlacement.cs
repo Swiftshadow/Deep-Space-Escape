@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PipePlacement : MonoBehaviour {
     private bool isPlaced = false;
+    private Transform trans;
 	// Use this for initialization
 	void Start () {
-		
+        trans = GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
@@ -29,8 +30,17 @@ public class PipePlacement : MonoBehaviour {
     {
        if (collision.gameObject.tag == "wall")
         {
-            isPlaced = true;
-            Debug.Log("placed");
+            
+            Debug.Log("You hit wall");
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "objective")
+        {
+            //clicks the pipe into place when it gets near objective
+            trans.position = other.gameObject.transform.position;
+            Place();
         }
     }
 }
