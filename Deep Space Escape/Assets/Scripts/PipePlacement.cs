@@ -43,4 +43,11 @@ public class PipePlacement : MonoBehaviour {
             Place();
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "objective")
+        {
+            Pickup();
+        }
+    }
 }
