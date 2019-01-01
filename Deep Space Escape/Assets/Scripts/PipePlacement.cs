@@ -39,13 +39,12 @@ public class PipePlacement : MonoBehaviour {
         if (other.gameObject.tag == "objective")
         {
             //clicks the pipe into place when it gets near objective
-            trans.position = other.gameObject.transform.position;
-            Place();
+            trans.GetComponent<Transform>().position = other.GetComponent<Transform>().position;
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "objective")
+        if (other.gameObject.tag == "objective2 || objective3")
         {
             Pickup();
         }
