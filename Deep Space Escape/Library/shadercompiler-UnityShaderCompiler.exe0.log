@@ -3,6 +3,7 @@ Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+<<<<<<< HEAD
 Cmd: initializeCompiler
 =======
 Base path: D:/_Programs/Unity Verison/2018.2.19f1/Editor/Data
@@ -163,3 +164,5 @@ Cmd: compileSnippet
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+>>>>>>> c0d4687948dcc3acc142df83e03b210c0087d73b
