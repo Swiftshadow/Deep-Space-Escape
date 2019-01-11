@@ -7,8 +7,6 @@ TagManager:
   - wall
   - pipe
   - objective
-  - objective2
-  - objective3
   layers:
   - Default
   - TransparentFX
