@@ -35,17 +35,17 @@ public class PipeBoxes : MonoBehaviour
     }
 
     // Trigger for when the player's hands exit the box.
-    //void OnTriggerEnter(Collider other)
+    /*//void OnTriggerEnter(Collider other)
     {
-       /* if (other.tag == "Player")
+        if (other.tag == "Player")
         {
             PalmStateMachine currentPalm = new PalmStateMachine();
             if (currentPalm.CurrentState == PalmState.Grabbing)
             {
                 Instantiate(pipe, other.transform.position, Quaternion.identity);
             }
-        }*/
+        }
 
-        
-    }
+
+}*/
 }
