@@ -402,6 +402,7 @@
     <Compile Include="Assets\Scripts\Puzzle Managers\WireManager.cs" />
     <Compile Include="Assets\Scripts\wallScript.cs" />
     <Compile Include="Assets\Scripts\WirePuzzle\NodeScoring.cs" />
+    <Compile Include="Assets\Scripts\WirePuzzle\WireScore.cs" />
     <Compile Include="Assets\Scripts\WirePuzzle\WireSpooler.cs" />
     <None Include="Assets\MetaSDK\Meta\Hands\HandInput\Shaders\MetaTransparent.shader" />
     <None Include="Assets\MetaSDK\Meta\SDK2Version.txt" />

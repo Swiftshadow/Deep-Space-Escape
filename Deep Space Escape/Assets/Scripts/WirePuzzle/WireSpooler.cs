@@ -9,6 +9,7 @@ public class WireSpooler : MonoBehaviour
 {
 
     public GameObject wireModule;
+    public GameObject wireHead;
 
     private Vector3 spawnOffset = new Vector3(0f, .1f, 0f);
 
@@ -18,11 +19,16 @@ public class WireSpooler : MonoBehaviour
     private bool setTagLoopOne = true;
     private bool setTagLoopTwo = true;
 
+    public int wireScore = 0;
+
 	// Use this for initialization
 	void Start () {
-	    newWireModule = Instantiate(wireModule, (transform.position + spawnOffset + new Vector3(0f, 0.1f, 0f)),
+	    newWireModule = Instantiate(wireHead, (transform.position + spawnOffset + new Vector3(0f, 0.1f, 0f)),
 	        transform.rotation);
 	    newWireModule.AddComponent<GrabInteraction>();
+	    newWireModule.tag = "NewWireTag";
+	    Debug.Log("Wire Head Tag: " + newWireModule.tag);
+	    newWireModule.GetComponent<WireScore>().wireScore = this.wireScore;
 	    oldWireModule = newWireModule;
 	    newWireModule = Instantiate(wireModule, (transform.position + spawnOffset), transform.rotation);
 	    newWireModule.AddComponent<SpringJoint>().connectedBody = oldWireModule.GetComponent<Rigidbody>();

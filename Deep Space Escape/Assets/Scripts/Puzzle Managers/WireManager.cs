@@ -5,7 +5,12 @@ using UnityEngine;
 //Manages the wires puzzle
 //Any logic not item-specific for the wires puzzle goes here
 //This script should attach to an invisible, persistant gameObject
-public class WireManager : BaseManager {
+public class WireManager : BaseManager
+{
+
+    public GameObject endNodeOne;
+    public GameObject endNodeTwo;
+    public GameObject endNodeThree;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +30,7 @@ public class WireManager : BaseManager {
     //Put puzzle-specific completion logic here
     public override bool checkComplete()
     {
-        return base.checkComplete();
+        if (endNodeOne.GetComponent<NodeScoring>().isFinished && endNodeTwo.GetComponent<NodeScoring>().isFinished && endNodeThree.GetComponent<NodeScoring>().isFinished) return true;
+        else return base.checkComplete();
     }
 }

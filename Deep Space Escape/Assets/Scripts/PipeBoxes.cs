@@ -36,7 +36,7 @@ public class PipeBoxes : MonoBehaviour
 
     // Trigger for when the player's hands exit the box.
     //void OnTriggerEnter(Collider other)
-    {
+   // {
        /* if (other.tag == "Player")
         {
             PalmStateMachine currentPalm = new PalmStateMachine();
@@ -47,5 +47,5 @@ public class PipeBoxes : MonoBehaviour
         }*/
 
         
-    }
+    //}
 }
