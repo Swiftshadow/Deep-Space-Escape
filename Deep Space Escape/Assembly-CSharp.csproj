@@ -394,7 +394,15 @@
     <Compile Include="Assets\MetaSDK\MetaExamples\Assets\Scripts\SwipeIntensityLightControl.cs" />
     <Compile Include="Assets\Scripts\PipeBoxes.cs" />
     <Compile Include="Assets\Scripts\PipePlacement.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Managers\BaseManager.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Managers\HoloManager.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Managers\PipesManager.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Managers\PuzzleManager.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Managers\RushManager.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Managers\WireManager.cs" />
     <Compile Include="Assets\Scripts\wallScript.cs" />
+    <Compile Include="Assets\Scripts\WirePuzzle\NodeScoring.cs" />
+    <Compile Include="Assets\Scripts\WirePuzzle\WireSpooler.cs" />
     <None Include="Assets\MetaSDK\Meta\Hands\HandInput\Shaders\MetaTransparent.shader" />
     <None Include="Assets\MetaSDK\Meta\SDK2Version.txt" />
     <None Include="Assets\MetaSDK\MetaExamples\Assets\Shaders\PointCloud.shader" />

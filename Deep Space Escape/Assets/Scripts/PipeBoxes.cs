@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Meta.HandInput;
 
-public class PipeBox : MonoBehaviour
+public class PipeBoxes : MonoBehaviour
 {
     // Reference for the pipe type.
     public GameObject pipe;
