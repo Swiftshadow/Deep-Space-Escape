@@ -27,11 +27,13 @@ public class WireSpooler : MonoBehaviour
 	        transform.rotation);
 	    newWireModule.AddComponent<GrabInteraction>();
 	    newWireModule.tag = "NewWireTag";
-	    Debug.Log("Wire Head Tag: " + newWireModule.tag);
+	    Debug.Log("WireSpooler: Wire Head Tag: " + newWireModule.tag);
 	    newWireModule.GetComponent<WireScore>().wireScore = this.wireScore;
 	    oldWireModule = newWireModule;
 	    newWireModule = Instantiate(wireModule, (transform.position + spawnOffset), transform.rotation);
-	    newWireModule.AddComponent<SpringJoint>().connectedBody = oldWireModule.GetComponent<Rigidbody>();
+	    newWireModule.AddComponent<SpringJoint>();
+	    newWireModule.GetComponent<SpringJoint>().connectedBody = oldWireModule.GetComponent<Rigidbody>();
+	    newWireModule.GetComponent<Rigidbody>().useGravity = false;
         setTagLoopOne = true;
 	}
 	
@@ -39,35 +41,39 @@ public class WireSpooler : MonoBehaviour
 	void Update () {
 	    if (setTagLoopOne && setTagLoopTwo)
 	    {
-	        Debug.Log("Setting tag");
+	        Debug.Log("WireSpooler: Setting tag");
 	        newWireModule.tag = "WireModule";
 	        setTagLoopOne = false;
 	        setTagLoopTwo = false;
 	    } else if (setTagLoopOne)
 	    {
+            Debug.Log("WireSpooler: One pass for tagging");
 	        setTagLoopTwo = true;
 	    }
 	}
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger entering");
+        Debug.Log("WireSpooler: Trigger entering");
         if (other.gameObject.CompareTag("WireModule"))
         {
-            Debug.Log("Destroying wire module");
+            Debug.Log("WireSpooler: Destroying wire module");
             other.gameObject.SetActive(false);
+            //Code below this is untested, may crash game
+            Destroy(other.gameObject);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Trigger exiting");
+        Debug.Log("WireSpooler: Trigger exiting");
         if (other.gameObject.CompareTag("WireModule"))
         {
             oldWireModule = newWireModule;
-            Debug.Log("Spawning wire module");
+            Debug.Log("WireSpooler: Spawning wire module");
             newWireModule = Instantiate(wireModule, (transform.position + spawnOffset), transform.rotation);
             newWireModule.AddComponent<SpringJoint>().connectedBody = oldWireModule.GetComponent<Rigidbody>();
+            newWireModule.GetComponent<Rigidbody>().useGravity = false;
             setTagLoopOne = true;
         }
     }

@@ -32,36 +32,37 @@ public class NodeScoring : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Object Entered");
-        Debug.Log("Other tag enter:" + other.gameObject.tag);
-        //if (other.GetComponent<WireScore>() != null)
-        try
-        {
-            other.GetComponent<WireScore>();
-            Debug.Log("Wire entered");
-            nodeScore += other.GetComponent<WireScore>().wireScore;
-            spooler.wireScore = nodeScore;
-            Debug.Log("Node score now entered " + nodeScore);
-            Debug.Log("Spooler score now entered " + spooler.wireScore);
-        } catch (NullReferenceException e)
-        {
-            Debug.Log(e.StackTrace);
+        Debug.Log("NodeScoring: Object Entered");
+        Debug.Log("NodeScoring: Other tag enter:" + other.gameObject.tag);
+        if (other.GetComponent<WireScore>() != null) {
+            if (other.GetComponent<WireScore>().isHead)
+            {
+                other.GetComponent<WireScore>();
+                Debug.Log("NodeScoring: Wire entered");
+                nodeScore += other.GetComponent<WireScore>().wireScore;
+                spooler.wireScore = nodeScore;
+                Debug.Log("NodeScoring: Node score now entered " + nodeScore);
+                Debug.Log("NodeScoring: Spooler score now entered " + spooler.wireScore);
+            }
         }
-        //else Debug.Log("Entered Object not a wire");
+        else Debug.Log("NodeScoring: Entered Object does not have WireScore");
     }
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Object Exited");
-        Debug.Log("Other tag exit:" + other.transform.tag);
+        Debug.Log("NodeScoring: Object Exited");
+        Debug.Log("NodeScoring: Other tag exit:" + other.transform.tag);
         if (other.GetComponent<WireScore>() != null)
         {
-            Debug.Log("Wire Exited");
-            nodeScore -= other.GetComponent<WireScore>().wireScore;
-            spooler.wireScore = nodeScore;
-            Debug.Log("Node score now exited " + nodeScore);
-            Debug.Log("Spooler score now exited " + spooler.wireScore);
+            if (other.GetComponent<WireScore>().isHead)
+            {
+                Debug.Log("NodeScoring: Wire Exited");
+                nodeScore -= other.GetComponent<WireScore>().wireScore;
+                spooler.wireScore = nodeScore;
+                Debug.Log("NodeScoring: Node score now exited " + nodeScore);
+                Debug.Log("NodeScoring: Spooler score now exited " + spooler.wireScore);
+            }
         }
-        else Debug.Log("Exited Object not a wire");
+        else Debug.Log("NodeScoring: Exited Object does not have WireScore");
     }
 }
