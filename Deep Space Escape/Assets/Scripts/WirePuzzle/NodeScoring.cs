@@ -11,11 +11,13 @@ public class NodeScoring : MonoBehaviour
     public int endScore = 0;
     public bool isEndNode = false;
     public bool isFinished = false;
+    public bool isStartNode = false;
 
 	// Use this for initialization
-	void Start ()
+	void Awake ()
 	{
-	    spooler = GetComponent<WireSpooler>();
+	    GetComponent<WireSpooler>().enabled = isStartNode ? true : false;
+        spooler = GetComponent<WireSpooler>();
 	}
 	
 	// Update is called once per frame
@@ -43,6 +45,7 @@ public class NodeScoring : MonoBehaviour
                 spooler.wireScore = nodeScore;
                 Debug.Log("NodeScoring: Node score now entered " + nodeScore);
                 Debug.Log("NodeScoring: Spooler score now entered " + spooler.wireScore);
+                if (!isStartNode) GetComponent<WireSpooler>().enabled = true;
             }
         }
         else Debug.Log("NodeScoring: Entered Object does not have WireScore");
@@ -61,6 +64,7 @@ public class NodeScoring : MonoBehaviour
                 spooler.wireScore = nodeScore;
                 Debug.Log("NodeScoring: Node score now exited " + nodeScore);
                 Debug.Log("NodeScoring: Spooler score now exited " + spooler.wireScore);
+                if (!isStartNode) GetComponent<WireSpooler>().enabled = false;
             }
         }
         else Debug.Log("NodeScoring: Exited Object does not have WireScore");

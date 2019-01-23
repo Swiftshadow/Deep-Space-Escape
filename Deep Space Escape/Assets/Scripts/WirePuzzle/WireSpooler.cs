@@ -8,6 +8,8 @@ using UnityEngine.Assertions.Must;
 public class WireSpooler : MonoBehaviour
 {
 
+    private NodeScoring nodeScore;
+
     public GameObject wireModule;
     public GameObject wireHead;
 
@@ -22,8 +24,10 @@ public class WireSpooler : MonoBehaviour
     public int wireScore = 0;
 
 	// Use this for initialization
-	void Start () {
-	    newWireModule = Instantiate(wireHead, (transform.position + spawnOffset + new Vector3(0f, 0.1f, 0f)),
+	void Start ()
+	{
+	    nodeScore = gameObject.GetComponent<NodeScoring>();
+         newWireModule = Instantiate(wireHead, (transform.position + spawnOffset + new Vector3(0f, 0.1f, 0f)),
 	        transform.rotation);
 	    newWireModule.AddComponent<GrabInteraction>();
 	    newWireModule.tag = "NewWireTag";

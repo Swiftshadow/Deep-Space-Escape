@@ -24,13 +24,18 @@ public class WireManager : BaseManager
         setComplete();
         //Debug code
 	    isComplete = Input.GetKey(KeyCode.Space);
-	    Debug.Log("Wire manager: " + isComplete);
+	    //Debug.Log("Wire manager: " + isComplete);
     }
 
     //Put puzzle-specific completion logic here
     public override bool checkComplete()
     {
-        if (endNodeOne.GetComponent<NodeScoring>().isFinished && endNodeTwo.GetComponent<NodeScoring>().isFinished && endNodeThree.GetComponent<NodeScoring>().isFinished) return true;
-        else return base.checkComplete();
+        if (endNodeOne.GetComponent<NodeScoring>().isFinished && endNodeTwo.GetComponent<NodeScoring>().isFinished &&
+            endNodeThree.GetComponent<NodeScoring>().isFinished)
+        {
+            Debug.Log("Puzzle complte!");
+            return true;
+        }
+        return base.checkComplete();
     }
 }
