@@ -15,7 +15,8 @@ public class WireScore : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+	    wireScore = GetComponentInParent<NodeScoring>().nodeScore;
 	}
 }

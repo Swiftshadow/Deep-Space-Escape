@@ -33,6 +33,7 @@ public class WireSpooler : MonoBehaviour
 	    newWireModule.tag = "NewWireTag";
 	    Debug.Log("WireSpooler: Wire Head Tag: " + newWireModule.tag);
 	    newWireModule.GetComponent<WireScore>().wireScore = this.wireScore;
+	    newWireModule.transform.parent = gameObject.transform;
 	    oldWireModule = newWireModule;
 	    newWireModule = Instantiate(wireModule, (transform.position + spawnOffset), transform.rotation);
 	    newWireModule.AddComponent<SpringJoint>();
