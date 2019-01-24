@@ -622,12 +622,13 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: SDK2_BaseProject
-  organizationId: 
+  cloudProjectId: a462fb9f-d2da-45e6-9deb-fd17f31ec8f1
+  projectName: Deep Space Escape
+  organizationId: dgguzman
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
