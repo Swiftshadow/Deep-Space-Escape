@@ -307,9 +307,9 @@ namespace Meta
             if (_rigidbody != null)
             {
                 _wasKinematicPriorToInteraction = _rigidbody.isKinematic;
-                _rigidbodyConstraintsPriorToInteraction = _rigidbody.constraints;
+                //_rigidbodyConstraintsPriorToInteraction = _rigidbody.constraints;
 
-                _rigidbody.constraints = RigidbodyConstraints.None;
+                //_rigidbody.constraints = RigidbodyConstraints.None;
                 _rigidbody.isKinematic = true;
             }
         }
